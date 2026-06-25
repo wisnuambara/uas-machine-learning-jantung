@@ -2,9 +2,9 @@
 
 Proyek ini adalah implementasi model *Machine Learning* untuk mendeteksi indikasi penyakit jantung berdasarkan data rekam medis pasien. Proyek ini disusun untuk memenuhi **Ujian Akhir Semester Genap TA. 2025/2026 mata kuliah Pembelajaran Mesin**.
 
-- **Link Aplikasi (Deployment):** [MASUKKAN LINK STREAMLIT CLOUD KAMU DI SINI]
-- **Video Demonstrasi:** [MASUKKAN LINK YOUTUBE/DRIVE JIKA ADA, ATAU HAPUS BARIS INI]
-
+- **Link Aplikasi (Deployment):** https://uas-pm-wisnuambara.streamlit.app/
+- **Video Demonstrasi:** https://www.loom.com/share/d4dfa7d6e9e04d1d890c08c27ec1ae09
+- **Google Collab:** https://colab.research.google.com/drive/1nIfPgMvG3pAGsDaDgck78K93HDnLXBo_?usp=sharing
 ---
 
 ## 📊 Penjelasan Dataset
@@ -40,6 +40,4 @@ Jika Anda ingin menjalankan aplikasi ini di komputer lokal, ikuti langkah-langka
     streamlit run app.py
 
 
-Google COllab
 
-https://colab.research.google.com/drive/1nIfPgMvG3pAGsDaDgck78K93HDnLXBo_?usp=sharing
