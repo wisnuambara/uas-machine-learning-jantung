@@ -1,20 +1,40 @@
-# Aplikasi Prediksi Penyakit Jantung 🫀
+# 🫀 Prediksi Penyakit Jantung (Heart Disease Detection)
 
-Proyek ini adalah implementasi model Machine Learning untuk memprediksi indikasi penyakit jantung berdasarkan data rekam medis pasien. Proyek ini disusun untuk memenuhi Ujian Akhir Semester Genap TA. 2025/2026 mata kuliah Pembelajaran Mesin.
+Proyek ini adalah implementasi model *Machine Learning* untuk mendeteksi indikasi penyakit jantung berdasarkan data rekam medis pasien. Proyek ini disusun untuk memenuhi **Ujian Akhir Semester Genap TA. 2025/2026 mata kuliah Pembelajaran Mesin**.
 
-## Penjelasan Dataset dan Pemrosesan
-Dataset yang digunakan adalah **Heart Disease Dataset** publik dari UCI Machine Learning Repository (Cleveland database). 
-Langkah pra-pemrosesan yang dilakukan meliputi:
-- **Pembersihan Data (Data Cleaning):** Menghapus baris yang memiliki missing values (simbol `?`) pada atribut `ca` dan `thal`.
-- **Encoding:** Mengubah variabel target yang memiliki 5 kelas (0-4) menjadi klasifikasi biner (0 = Sehat, 1 = Sakit).
-- **Standarisasi:** Menggunakan `StandardScaler` untuk menyamakan rentang skala pada fitur numerik seperti tekanan darah (`trestbps`) dan kolesterol (`chol`) agar model dilatih lebih optimal.
+- **Link Aplikasi (Deployment):** [MASUKKAN LINK STREAMLIT CLOUD KAMU DI SINI]
+- **Video Demonstrasi:** [MASUKKAN LINK YOUTUBE/DRIVE JIKA ADA, ATAU HAPUS BARIS INI]
 
-## Dokumentasi Antarmuka (Interface)
-Aplikasi dibangun menggunakan **Streamlit**. Pengguna dapat memasukkan 13 parameter klinis pasien melalui antarmuka formulir interaktif (Dropdown dan Number Input).
-Sistem akan memproses masukan pengguna melewati tahapan standarisasi yang sama dengan saat pelatihan, kemudian memprediksi hasilnya menggunakan model `Random Forest Classifier` yang telah dioptimasi via Hyperparameter Tuning, lalu menampilkan peringatan medis yang sesuai.
+---
 
-## Cara Menjalankan Proyek Secara Lokal
-1. Pastikan Python sudah terinstal.
-2. Buka terminal/command prompt, arahkan ke folder proyek ini.
-3. Instal dependensi dengan perintah: `pip install -r requirements.txt`
-4. Jalankan aplikasi Streamlit dengan perintah: `streamlit run app.py`
+## 📊 Penjelasan Dataset
+Dataset yang digunakan adalah **Heart Disease Dataset** publik dari UCI Machine Learning Repository (Cleveland database). Dataset ini berisi 13 fitur klinis (seperti usia, tekanan darah, kolesterol, hasil EKG, dll) dan 1 kolom target.
+
+**Pra-pemrosesan Data yang Dilakukan:**
+1. **Pembersihan Data (Handling Missing Values):** Menghapus baris data yang cacat atau kosong (ditandai dengan simbol `?` pada dataset asli).
+2. **Encoding Target:** Mengubah target multikelas (0-4) menjadi klasifikasi biner, yaitu `0` (Sehat/Indikasi Negatif) dan `1` (Sakit/Indikasi Positif).
+3. **Standarisasi:** Menggunakan `StandardScaler` untuk menyamakan rentang skala pada fitur numerik agar algoritma dapat belajar secara seimbang dan optimal.
+
+## 🤖 Pembangunan dan Optimasi Model
+- **Algoritma:** Random Forest Classifier.
+- **Optimasi (Hyperparameter Tuning):** Menggunakan `GridSearchCV` untuk mencari kombinasi parameter terbaik (`n_estimators`, `max_depth`, `min_samples_split`).
+- **Evaluasi:** Model dievaluasi menggunakan metrik **Akurasi** dan **F1-Score** pada data uji (proporsi *train-test split* 80:20). Model dan *scaler* kemudian disimpan dalam format `.pkl` menggunakan `joblib`.
+
+## 💻 Dokumentasi Antarmuka (Aplikasi Web)
+Aplikasi dibangun menggunakan *framework* **Streamlit**. 
+- **Input Pengguna:** Menyediakan form interaktif (berupa *dropdown* dan *number input*) untuk memasukkan 13 parameter medis pasien. Terdapat juga menu FAQ bergaya *dropdown* akordion untuk mengedukasi pengguna mengenai definisi setiap kolom.
+- **Penanganan Input:** Sebelum diprediksi, data masukan dari pengguna akan ditransformasi (standarisasi) secara *real-time* menggunakan *scaler* yang diekstrak dari file `.pkl` hasil pelatihan awal.
+- **Output:** Sistem akan mengeluarkan prediksi akhir berupa **"INDIKASI POSITIF"** (Berisiko) atau **"INDIKASI NEGATIF"** (Aman).
+
+---
+
+## 🚀 Cara Menjalankan Proyek Secara Lokal
+
+Jika Anda ingin menjalankan aplikasi ini di komputer lokal, ikuti langkah-langkah berikut:
+
+1. Clone Repository ini
+    git clone https://github.com/wisnuambara/uas-machine-learning-jantung.git
+2. Install Dependency yang dibutuhkan
+    pip install -r requirements.txt
+3. Jalankan Aplikasi
+    streamlit run app.py
