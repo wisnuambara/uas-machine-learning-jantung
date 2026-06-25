@@ -5,7 +5,6 @@ Proyek ini adalah implementasi model *Machine Learning* untuk mendeteksi indikas
 - **Link Aplikasi (Deployment):** https://uas-pm-wisnuambara.streamlit.app/
 - **Video Demonstrasi:** https://www.loom.com/share/d4dfa7d6e9e04d1d890c08c27ec1ae09
 - **Google Collab:** https://colab.research.google.com/drive/1nIfPgMvG3pAGsDaDgck78K93HDnLXBo_?usp=sharing
-- 
 ---
 
 ## 📊 Penjelasan Dataset
