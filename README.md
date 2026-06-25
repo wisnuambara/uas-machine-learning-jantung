@@ -38,3 +38,8 @@ Jika Anda ingin menjalankan aplikasi ini di komputer lokal, ikuti langkah-langka
     pip install -r requirements.txt
 3. Jalankan Aplikasi
     streamlit run app.py
+
+
+Google COllab
+
+https://colab.research.google.com/drive/1nIfPgMvG3pAGsDaDgck78K93HDnLXBo_?usp=sharing
